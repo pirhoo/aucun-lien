@@ -1,0 +1,21 @@
+@import "base"; 
+
+.jspHorizontalBar {
+	top: 0;
+}
+
+.jspTrack, .jspHorizontalBar, .jspVerticalBar {
+	background:transparent;
+	cursor:pointer;
+}
+
+
+.jspTrack {	
+	height:17px !important;
+	margin:auto;
+}
+
+.jspDrag {
+	background:url("../img/scroll.png") no-repeat center center;
+	width:110px !important;		
+}

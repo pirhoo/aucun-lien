@@ -1,0 +1,176 @@
+@import "compass/css3";
+@import "compass/typography/text/replacement";
+
+
+$regular-black:#373434;
+$page-width:975px;
+
+$blueprint-grid-columns: 24;
+$blueprint-container-size: $page-width;
+$blueprint-grid-margin: 1px;
+$blueprint-grid-width: ($blueprint-container-size + $blueprint-grid-margin);
+$blueprint-grid-width: $blueprint-grid-width / $blueprint-grid-columns - $blueprint-grid-margin;
+// Import all the default blueprint modules so that we can access their mixins.
+@import "blueprint";
+// Import the non-default scaffolding module.
+@import "blueprint/scaffolding";
+
+@mixin default-text-format {
+	
+	p {
+		font-size:  14px;
+		text-align: left;
+		line-height: 17.2px;
+		margin: 0;
+		text-align:left;
+	}
+
+	ol, ul {
+		line-height: 1.5em;
+		margin: 1.2em 0 1.2em 2em;
+		padding: 0 0 0 15px;
+	}
+
+	ol {
+		padding: 0 0 0 20px;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		border-bottom:0px;
+		margin-bottom: 14px;
+		padding: 0;
+		font-size: 26px;
+		font-weight: normal;
+		letter-spacing: -1px;
+		width: 100%;
+		color: #000000;
+		overflow: visible;
+		text-decoration: none;
+		font-family:"DINN", "MyriadPro-Light", Georgia, serif;
+		font-weight:bold;
+	}
+
+
+	h1 { 
+		font-size: 30px; 				
+		letter-spacing: -1px;
+		margin:20px 0 15px 0;
+		font-weight:bold;
+	}
+
+	h2 {
+		border-bottom:0px dotted #ffffff;
+		margin-bottom: 14px;
+		padding: 0;
+		font-size: 18px;
+		font-weight: normal;
+		letter-spacing: -1px;
+		width: 100%;
+		color: #000000;
+		overflow: visible;
+		text-decoration: none;
+	}
+
+	h3 { font-size: 1.6em; }
+	h4 { font-size: 1.4em; }
+
+
+	hr {/* to be styled */}
+
+	a:link,
+	a:visited {
+		color: #000000;
+	}
+
+	a:hover,
+	a:active {
+		color: #000000;
+		text-decoration: none;
+	}
+
+	img.noborder {
+		padding: 0;
+		border: none;
+	text-decoration:none;
+	}
+
+	img.wp-smiley {
+		border: none;
+	}
+
+	input, textarea, select {
+		border: 1px solid #000000;
+		background: #FFFFFF;
+		color: #000000;
+		font-size: 1.1em;
+		font-family:Verdana, Geneva, sans-serif;
+	}
+	input, textarea {
+		background: #FFFFFF url(images/inputbg.gif) repeat-x top;
+	}
+
+	.button { 
+		background: #FFFFFF none; 
+		margin-top: -10px;
+		text-decoration: none;
+		bottom: 16px;
+	}
+
+	blockquote {
+		margin: 0 20px;
+		padding: 0 10px 0 25px;
+		border-left: 4px solid #FFFFFF;
+	}
+
+	strong, b {
+		font-weight:bold;
+	}
+
+	em, i {
+		font-style:italic;
+	}
+
+	code {
+		font-family: monospace;
+		color: #666;
+	}
+
+	form, img, img a {
+		margin: 0;
+		padding: 0;
+		border: 0;
+		border:none;
+		text-decoration:none;
+	}
+
+	img a {
+		border:none;
+		text-decoration:none;
+	}
+		
+
+
+	.small {
+		font-size: 0.9em;
+		color: #999;
+	}
+
+	.alignleft {
+		float: left;
+		margin-right: 10px;
+		clear: left;
+	}
+	.alignright {
+		float: right;
+		margin-left: 10px;
+		clear: right;
+	}
+
+	li {
+		list-style:disc outside none;
+	}
+	
+	ol li {
+		list-style-type:decimal;
+	}
+}

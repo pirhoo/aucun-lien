@@ -1,0 +1,303 @@
+@import "compass/reset";
+@import "base";
+
+
+@include font-face("Memphis", font-files("MEMPHISM.OTF", opentype) );
+
+body {
+    font: 13px Helvetica, arial,sans-serif;    
+    background: #fff;
+    
+    color:$regular-black;
+    
+    &.bp {
+        @include blueprint-utilities;
+        @include blueprint-debug;
+        @include blueprint-interaction; 
+        @include blueprint-grid;
+
+        .first { clear:left; }
+    }
+}
+
+
+label.checkbox, label.radio {
+
+    input {
+        position:relative;
+        top:2px;
+    }
+}
+
+
+@keyframes goright {  
+    from { margin-left: -1 * span(24); }        
+    to { margin-left:0px; }  
+}  
+
+@-moz-keyframes goright {  
+    from { margin-left: -1 * span(24); }        
+    to { margin-left:0px; }  
+}  
+
+@-webkit-keyframes goright {  
+    from { margin-left: -1 * span(24); }        
+    to { margin-left:0px; }  
+}  
+
+@-ms-keyframes goright {  
+    from { margin-left: -1 * span(24); }        
+    to { margin-left:0px; }  
+} 
+
+@-o-keyframes goright {  
+    from { margin-left: -1 * span(24); }        
+    to { margin-left:0px; }  
+}
+
+.separator {
+    padding:0 15px;
+    font-size:8px;
+    font-weight:normal;
+}
+
+.fleft { float: left; }
+.fcenter { margin: 0 auto; }
+.fright { float: right; }
+
+.tl { text-align: left; }
+.tc { text-align: center; }
+.tr { text-align: right; }
+.tj { text-align: justify; }
+
+a {
+    color:$regular-black;
+    text-decoration: none;
+}
+
+::selection {
+        background: #ff0098;
+		color:white;
+}
+
+::-moz-selection {
+        background: #ff0098;
+		color:white;
+}
+
+.fhidden { display: none !important; }
+.hidden { display: none ; }
+
+.breaker {
+    display: block;
+    clear: both;
+    overflow: hidden;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+h1, .site-title {
+    font-size:38px;
+    line-height:38px;   
+    font-weight:bold; 
+	font-family:'Memphis', arial,sans-serif;
+	letter-spacing:-2px;
+}
+
+h2 {
+    font-size:36px;
+    line-height:32px;
+	margin-bottom:30px;
+	font-family:'Memphis',  arial,sans-serif;
+}
+
+h3 {
+    font-size:20px;
+    line-height:16px;
+	font-family:'Memphis', arial,sans-serif;
+	letter-spacing:0.1em;
+	word-spacing:0.1em
+}
+
+h4 {
+    font-size:16px;
+    line-height:14px;
+}
+
+h5 {
+    font-size:14px;
+    line-height:12px;
+}
+
+.text-center {
+	text-align:center;
+}
+
+.text-left {
+	text-align:left;
+}
+
+.text-right {
+	text-align:right;
+}
+
+.grey {    
+    background:#eeeeee;    
+    height:22px;
+    border-bottom:1px solid white;
+
+    input.text, input.submit {
+        border:0;    
+    }
+}
+
+.black { 
+    background:#000;
+}
+
+.bottom-1 { margin-bottom:10px !important; }
+.bottom-2 { margin-bottom:20px !important; }
+.bottom-3 { margin-bottom:30px !important; }
+.bottom-4 { margin-bottom:40px !important; }
+.bottom-5 { margin-bottom:50px !important; }
+.bottom-6 { margin-bottom:60px !important; }
+.bottom-7 { margin-bottom:70px !important; }
+.bottom-8 { margin-bottom:80px !important; }
+.bottom-9 { margin-bottom:90px !important; }
+.bottom-10 { margin-bottom:100px !important; }
+
+.top-1 { margin-top:10px !important; }
+.top-2 { margin-top:20px !important; }
+.top-3 { margin-top:30px !important; }
+.top-4 { margin-top:40px !important; }
+.top-5 { margin-top:50px !important; }
+.top-6 { margin-top:60px !important; }
+.top-7 { margin-top:70px !important; }
+.top-8 { margin-top:80px !important; }
+.top-9 { margin-top:90px !important; }
+.top-10 { margin-top:100px !important; }
+
+.left-1 { margin-left:10px !important; }
+.left-2 { margin-left:20px !important; }
+.left-3 { margin-left:30px !important; }
+.left-4 { margin-left:40px !important; }
+.left-5 { margin-left:50px !important; }
+.left-6 { margin-left:60px !important; }
+.left-7 { margin-left:70px !important; }
+.left-8 { margin-left:80px !important; }
+.left-9 { margin-left:90px !important; }
+.left-10 { margin-left:100px !important; }
+
+.right-1 { margin-right:10px !important; }
+.right-2 { margin-right:20px !important; }
+.right-3 { margin-right:30px !important; }
+.right-4 { margin-right:40px !important; }
+.right-5 { margin-right:50px !important; }
+.right-6 { margin-right:60px !important; }
+.right-7 { margin-right:70px !important; }
+.right-8 { margin-right:80px !important; }
+.right-9 { margin-right:90px !important; }
+.right-10 { margin-right:100px !important; }
+
+
+.quiet {
+    color:#999;     
+}
+
+form {
+    
+    label span, .field-warning {        
+        padding:4px 0;        
+
+        &.field-warning {
+            background:#F49A9A;  
+            color:lighten(#F49A9A, 90%);
+            
+            padding-left:6px;  
+            padding-right:6px; 
+
+            margin-bottom:0;
+            margin-right:0; 
+
+            position:relative;
+            @include transition(0.4s);
+
+            max-width:span(8);
+
+            &.hidden {
+                @include opacity(0);
+                @include transform(translateX(50px));
+            }
+
+
+            &:before {
+                content:"";
+                display:block;
+
+                position:absolute;
+                top:0;
+                left:0;
+
+                background:#F49A9A;
+                height:0;
+                width:0;
+
+                border:11px solid white;
+                border-right-color:#F49A9A;
+
+                margin-left:-22px;
+            }
+        }
+    }
+
+}
+
+input.text, input.submit {
+    
+    border:0;
+    border-bottom:1px solid white;
+    background:#eeeeee;
+
+    font: 12px Helvetica, arial,sans-serif;  
+
+    height:14px;
+    padding:4px 6px;        
+    line-height:18px;
+
+    &.submit {
+
+        padding-bottom:18px;
+        font-weight:bold;
+
+        background:url("../img/submit.png") right 8px no-repeat #eeeeee;
+        border-bottom:0;
+        border-right:5px #eeeeee solid;
+        border-left:1px #fff solid;
+
+        cursor:pointer;
+    }
+}
+
+textarea {
+    border:0;
+    border-bottom:1px solid white;
+    background:#eeeeee;  
+    padding:4px 6px;        
+
+    line-height:18px;
+    font: 12px Helvetica, arial,sans-serif;  
+}
+
+.btn {
+    padding:5px 10px;
+    color:black;
+    font-size:12px;
+    text-transform: uppercase;
+    display:inline-block;    
+    background:#eeeeee;
+    cursor: pointer;
+}
